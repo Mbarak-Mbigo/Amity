@@ -164,11 +164,10 @@ class AmityTests(unittest.TestCase):
             self.amity.persons['fellows']['NAIDY'].id, 'React'),
             'unallocated fellow living')
 
-    def test_unallocated_persons(self):
-        """Test allocates unallocated and prints unallocated."""
+    def test_allocates_unallocated(self):
+        """Test allocates unallocated."""
         # Does not allocate if not people in the system
         self.assertTrue(str(self.amity.allocate_room()) == 'No person yet')
-        self.assertEqual(str(self.amity.print_unallocated()), 'Empty')
         self.amity.add_person('Amina', 'fellow', 'Y')
         self.amity.add_person('Ridhaa', 'fellow')
         self.amity.add_person('Faizi', 'staff')
