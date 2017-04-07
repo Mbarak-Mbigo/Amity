@@ -273,8 +273,8 @@ class AmityTests(unittest.TestCase):
         self.assertEqual(str(self.amity.load_state('nonexistent.db')),
                          'database does not exist')
 
-        self.assertEqual(self.amity.load_state('testdata.db'),
-                         'Operation complete')
+        self.assertEqual(str(self.amity.load_state('testda.db')),
+                         'database does not exist')
 
 
 if __name__ == '__main__':
